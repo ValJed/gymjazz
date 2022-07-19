@@ -1,8 +1,15 @@
 @import url('~normalize.css');
 // NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
 // styles.
-@import './scss/_settings';
-@import './scss/_type';
-@import './scss/_layout';
-@import './scss/_welcome';
-@import './scss/_widgets';
+
+.header {
+  height: 75px;
+  background-color: #fff;
+  display: flex;  
+  align-items: center;
+  justify-content: start;
+
+  .logo {
+      max-height: 60%;
+  }
+}

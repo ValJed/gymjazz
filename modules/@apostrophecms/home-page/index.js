@@ -4,51 +4,47 @@ module.exports = {
   },
   fields: {
     add: {
-      main: {
+      title: {
+        label: 'Title',
+        type: 'string',
+        required: true
+      },
+      description: {
+        label: 'Description',
+        type: 'string',
+        required: true
+      },
+      inscription_btn: {
+        label: 'Inscription Button Text',
+        type: 'string'
+      },
+      description_block: {
         type: 'area',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {
-              toolbar: [
-                'styles',
-                '|',
-                'bold',
-                'italic',
-                'strike',
-                'link',
-                '|',
-                'bulletList',
-                'orderedList'
-              ],
-              styles: [
-                {
-                  tag: 'p',
-                  label: 'Paragraph (P)'
-                },
-                {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
-                },
-                {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
-                }
-              ]
-            },
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
+            description: {},
+            list: {}
+          }
+        }
+      },
+      incription_block: {
+        type: 'area',
+        options: {
+          widgets: {
+            description: {},
+            list: {}
           }
         }
       }
-    },
-    group: {
-      basics: {
-        label: 'Basics',
-        fields: [
-          'title',
-          'main'
-        ]
-      }
+    }
+  },
+  group: {
+    basics: {
+      label: 'Basics',
+      fields: [
+        'title',
+        'main'
+      ]
     }
   }
 };
