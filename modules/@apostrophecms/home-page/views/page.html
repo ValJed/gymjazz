@@ -18,11 +18,7 @@
       {% area data.page, 'description_block' %}
     </section>
     <section class="inscription">
-      <h1 class="banner__title">{{ data.page.title }}</h1>
-      <p class="banner__description">{{ data.page.description }}</p>
-      <button class="banner_btn btn">
-        {{ data.page.inscription_btn }}
-      </button>
+      {% area data.page, 'inscription_block' %}
     </section>
     <section class="contact">
 

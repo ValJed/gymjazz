@@ -30,10 +30,8 @@ require('apostrophe')({
     asset: {},
     // The project's first custom page type.
     'default-page': {},
-    'banner-widget': {},
-    'inscription-widget': {},
     'list-widget': {},
-    'presentation-widget': {},
+    'text-widget': {},
     'map-widget': {}
   }
 });

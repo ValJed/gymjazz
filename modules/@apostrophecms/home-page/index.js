@@ -22,7 +22,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            description: {},
+            text: {},
             list: {}
           }
         }
@@ -31,7 +31,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            description: {},
+            text: {},
             list: {}
           }
         }
