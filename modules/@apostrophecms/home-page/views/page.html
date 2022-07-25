@@ -1,30 +1,26 @@
-{#
-  This is an example home page template. It inherits and extends a layout template
-  that lives in the top-level views/ folder for convenience
-#}
-
 {% extends "layout.html" %}
 
+{% set img = apos.image.first(data.page.banner_img) %}
+{% set gradient = "linear-gradient(180deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 0%) 100%)" %}
+
 {% block main %}
-  <div class="home-wrapper">
-    <section class="banner">
-      <h1 class="banner__title">{{ data.page.title }}</h1>
-      <p class="banner__description">{{ data.page.description }}</p>
-      <button class="banner_btn btn">
-        {{ data.page.inscription_btn }}
-      </button>
-    </section>
-    <section class="description">
-      {% area data.page, 'description_block' %}
-    </section>
-    <section class="inscription">
-      {% area data.page, 'inscription_block' %}
-    </section>
-    <section class="contact">
-
-    </section>
-    <section class="map">
-
-    </section>
-  </div>
+    <div class="home-container">
+      <section class="banner" style="background-image: {{ gradient }},url({{ img._urls.original }})">
+            <div class="container">
+              <h1 class="banner__title">{{ data.page.title }}</h1>
+              <h2 class="banner__description">{{ data.page.description }}</h2>
+              <button class="banner_btn btn">{{ data.page.inscription_btn }}</button>
+            </div>
+        </section>
+        <section class="description">
+            {% area data.page, 'description_block' %}
+        </section>
+        <section class="inscription">
+            {% area data.page, 'inscription_block' %}
+        </section>
+        <section class="contact">
+        </section>
+        <section class="map">
+        </section>
+    </div>
 {% endblock %}

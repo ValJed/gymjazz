@@ -18,6 +18,16 @@ module.exports = {
         label: 'Inscription Button Text',
         type: 'string'
       },
+      banner_img: {
+        label: 'Banner Image',
+        type: 'area',
+        options: {
+          max: 1,
+          widgets: {
+            '@apostrophecms/image': {}
+          }
+        }
+      },
       description_block: {
         type: 'area',
         options: {
@@ -27,7 +37,7 @@ module.exports = {
           }
         }
       },
-      incription_block: {
+      inscription_block: {
         type: 'area',
         options: {
           widgets: {
@@ -36,15 +46,19 @@ module.exports = {
           }
         }
       }
-    }
-  },
-  group: {
-    basics: {
-      label: 'Basics',
-      fields: [
-        'title',
-        'main'
-      ]
+    },
+    group: {
+      basics: {
+        label: 'Basics',
+        fields: [
+          'title',
+          'description',
+          'inscription_btn',
+          'banner_img',
+          'description_block',
+          'inscription_block'
+        ]
+      }
     }
   }
 };

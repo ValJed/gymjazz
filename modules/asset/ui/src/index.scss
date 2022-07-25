@@ -1,15 +1,45 @@
-@import url('~normalize.css');
-// NOTE: We're using a `.bp-` namespace to indicate these are the boilerplate
-// styles.
+@import "~normalize.css";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500;600&display=swap";
+
+// Global style
+
+.container {
+  width: 80%;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.btn {
+  background: linear-gradient(90deg, #4968ff 0%, #6fe5f3 100%);
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 40px;
+  color: #fff;
+  border: 0;
+}
+
+.page-container {
+  padding-top: 75px;
+}
 
 .header {
   height: 75px;
+  width: 100%;
+  top: 112px;
+  left: 0;
+  position: fixed;
   background-color: #fff;
-  display: flex;  
-  align-items: center;
-  justify-content: start;
+  box-shadow: 0 6px 7px -6px rgb(0 0 0 / 10%);
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
 
   .logo {
-      max-height: 60%;
+    max-height: 60%;
   }
 }
