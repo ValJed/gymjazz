@@ -1,5 +1,5 @@
 require('apostrophe')({
-  shortName: 'a3-boilerplate',
+  shortName: 'gymjazz',
   modules: {
     // Apostrophe module configuration
     // *******************************
@@ -13,17 +13,12 @@ require('apostrophe')({
     // `className` options set custom CSS classes for Apostrophe core widgets.
     '@apostrophecms/rich-text-widget': {
       options: {
-        className: 'bp-rich-text'
+        className: 'apos-rich-text'
       }
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget'
-      }
-    },
-    '@apostrophecms/video-widget': {
-      options: {
-        className: 'bp-video-widget'
+        className: 'apos-image-widget'
       }
     },
     // `asset` supports the project's webpack build for client-side assets.
@@ -32,6 +27,7 @@ require('apostrophe')({
     'default-page': {},
     'list-widget': {},
     'text-widget': {},
-    'map-widget': {}
+    'map-widget': {},
+    'block-widget': {}
   }
 });

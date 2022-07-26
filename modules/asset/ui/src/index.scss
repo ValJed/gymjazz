@@ -1,7 +1,29 @@
 @import "~normalize.css";
-@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500;600;700&display=swap";
 
 // Global style
+
+:root {
+  --primary: #4866ff;
+  --text: #666;
+}
+
+.apos-rich-text {
+  p {
+    font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.apos-admin-bar-spacer {
+  margin-bottom: 0 !important;
+}
 
 .container {
   width: 80%;
@@ -17,6 +39,7 @@
   padding: 15px 40px;
   color: #fff;
   border: 0;
+  cursor: pointer;
 }
 
 .page-container {
@@ -26,11 +49,12 @@
 .header {
   height: 75px;
   width: 100%;
-  top: 112px;
+  top: 0;
   left: 0;
   position: fixed;
   background-color: #fff;
   box-shadow: 0 6px 7px -6px rgb(0 0 0 / 10%);
+  z-index: 10;
 
   .container {
     height: 100%;
@@ -42,4 +66,8 @@
   .logo {
     max-height: 60%;
   }
+}
+
+.apos-notifications + [data-apos-refreshable] .header {
+  top: 112px;
 }

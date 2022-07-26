@@ -9,18 +9,11 @@
             <div class="container">
               <h1 class="banner__title">{{ data.page.title }}</h1>
               <h2 class="banner__description">{{ data.page.description }}</h2>
-              <button class="banner_btn btn">{{ data.page.inscription_btn }}</button>
+              <button class="banner__btn btn">{{ data.page.inscription_btn }}</button>
             </div>
         </section>
-        <section class="description">
-            {% area data.page, 'description_block' %}
-        </section>
-        <section class="inscription">
-            {% area data.page, 'inscription_block' %}
-        </section>
-        <section class="contact">
-        </section>
-        <section class="map">
+        <section class="content">
+            {% area data.page, 'content' %}
         </section>
     </div>
 {% endblock %}

@@ -28,21 +28,12 @@ module.exports = {
           }
         }
       },
-      description_block: {
+      content: {
+        label: 'Page Content',
         type: 'area',
         options: {
           widgets: {
-            text: {},
-            list: {}
-          }
-        }
-      },
-      inscription_block: {
-        type: 'area',
-        options: {
-          widgets: {
-            text: {},
-            list: {}
+            block: {}
           }
         }
       }
@@ -55,8 +46,7 @@ module.exports = {
           'description',
           'inscription_btn',
           'banner_img',
-          'description_block',
-          'inscription_block'
+          'content'
         ]
       }
     }

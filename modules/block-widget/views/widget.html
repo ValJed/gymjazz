@@ -1,0 +1,5 @@
+{% set img = apos.image.first(data.widget.image) %}
+
+<div class="block" style="background-image: url({{ img }})">
+  {% area data.widget, 'content' %}
+</div>

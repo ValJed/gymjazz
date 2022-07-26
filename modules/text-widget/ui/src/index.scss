@@ -1,0 +1,10 @@
+.text-widget {
+  &__title {
+    font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.4em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+}
