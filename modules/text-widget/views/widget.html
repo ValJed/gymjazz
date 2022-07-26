@@ -1,9 +1,12 @@
-<div class="text-widget container">
-  <h2 class="text-widget__title">
-    {{ data.widget.title }}
-  </h2>
+<div class="text-widget">
+  <div class="container">
+    <h2 class="text-widget__title">
+      {{ data.widget.title }}
+    </h2>
 
-  <div class="text-widget__content">
-    {% area data.widget, 'content' %}
+    <div class="text-widget__content">
+      {% area data.widget, 'content' %}
+    </div>
+
   </div>
 </div>

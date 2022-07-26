@@ -1,0 +1,40 @@
+.list-widget {
+  &__list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.4em;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-right: 10px;
+
+      // background-color: var(--primary);
+      background-position: center;
+      background-size: cover;
+
+      // mask-image: url("/images/circle-arrow.svg");
+      fill: var(--primary);
+      background-image: url("/images/circle-arrow.svg");
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="list-widget">
+  <ul class="list-widget__list container">
+    {% for item in data.widget.items %}
+    <li class="list-widget__item">
+      <h3 class="list-widget__item-title">
+        {{ item.title }}
+      </h3>
+      <div class="widget-list__item-text">
+        {% area item, 'text' %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
