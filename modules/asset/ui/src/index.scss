@@ -12,7 +12,7 @@
   p {
     font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
     color: var(--text);
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
     font-size: 1.1rem;
 
     strong {
@@ -40,6 +40,25 @@
   color: #fff;
   border: 0;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background: url("/images/arrow.svg");
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .page-container {

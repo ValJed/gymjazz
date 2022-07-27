@@ -1,12 +1,29 @@
+{% set widget = data.widget %}
+
 <div class="text-widget">
   <div class="container">
     <h2 class="text-widget__title">
-      {{ data.widget.title }}
+      {{ widget.title }}
     </h2>
 
     <div class="text-widget__content">
-      {% area data.widget, 'content' %}
+      <div class="text-widget__text">
+        {% area widget, 'content' %}
+      </div>
+      {% if widget.buttons | length %}
+      <div class="text-widget__buttons">
+        {% for btn in widget.buttons %}
+        <!-- {% set url = apos.attachment.url(btn._files[0]) %} -->
+        {% set file = btn._files[0] %}
+        {% set url = btn._files[0]._urls.original %}
+        <button class="btn">
+          <a href="{{ file.attachment._url }}" target="_blank">
+            {{ btn.text }}
+          </a>
+        </button>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
-
   </div>
 </div>
