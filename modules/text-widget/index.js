@@ -33,12 +33,12 @@ module.exports = {
               label: 'Link to File',
               type: 'relationship',
               withType: '@apostrophecms/file',
-              max: 1
-              // builders: {
-              //   project: {
-              //     _url: 1
-              //   }
-              // }
+              max: 1,
+              builders: {
+                project: {
+                  _url: 1
+                }
+              }
             }
           }
         }
