@@ -1,0 +1,23 @@
+{% set widget = data.widget %}
+
+<div class="block">
+  <div class="contact-widget">
+    <div class="container">
+      <h2 class="contact-widget__title title">
+        {{ widget.title }}
+      </h2>
+      <form class="contact-widget__form" action="">
+        <div class="contact-widget__inputs">
+          <input class="contact-widget__input text-input" type="name" placeholder="Nom" />
+          <input class="contact-widget__input text-input" type="email" placeholder="Adresse e-mail" />
+        </div>
+        <textarea class="contact-widget__input textarea-input" type="textarea" placeholder="Message"></textarea>
+        <div class="contact-widget__btn-container">
+          <button class="btn">
+            Envoi
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

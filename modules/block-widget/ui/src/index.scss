@@ -1,8 +1,28 @@
 .block {
+  position: relative;
   padding: 100px 0;
   background-color: #fff;
   background-position: 50%;
   background-size: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    width: 80%;
+    max-width: 1080px;
+    height: 1px;
+    display: block;
+    border-top: var(--blue) dashed 1px;
+    position: absolute;
+    top: 70px;
+  }
+
+  &:nth-child(even)::before {
+    left: 0;
+  }
+
+  &:nth-child(odd)::before {
+    right: 0;
+  }
 }

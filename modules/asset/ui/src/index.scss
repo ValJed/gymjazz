@@ -3,9 +3,14 @@
 
 // Global style
 
+body {
+  font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+}
+
 :root {
   --primary: #4866ff;
   --text: #666;
+  --blue: #2ea3f2;
 }
 
 .apos-rich-text {
@@ -23,6 +28,15 @@
 
 .apos-admin-bar-spacer {
   margin-bottom: 0 !important;
+}
+
+.title {
+  font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.4em;
+  color: var(--primary);
+  margin: 0 0 30px;
 }
 
 .container {

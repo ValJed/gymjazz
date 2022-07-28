@@ -33,7 +33,8 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            block: {}
+            block: {},
+            contact: {}
           }
         }
       }

@@ -1,0 +1,47 @@
+.contact-widget {
+  margin: 40px 0;
+
+  &__input {
+    background-color: #eee;
+    width: 100%;
+    border-width: 0;
+    border-radius: 0;
+    color: #666;
+    font-size: 14px;
+    padding: 16px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 760px) {
+      display: block;
+    }
+  }
+
+  .text-input {
+    @media screen and (min-width: 760px) {
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .textarea-input {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -28,6 +28,7 @@ require('apostrophe')({
     'list-widget': {},
     'text-widget': {},
     'map-widget': {},
-    'block-widget': {}
+    'block-widget': {},
+    'contact-widget': {}
   }
 });
