@@ -1,0 +1,24 @@
+.page-content {
+  padding: 60px 0;
+  font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+  color: #333;
+  min-height: calc(100vh - 75px - 50px);
+  box-sizing: border-box;
+
+  a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .apos-rich-text {
+    h2,
+    h3 {
+      color: #333;
+      font-weight: 500;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+}

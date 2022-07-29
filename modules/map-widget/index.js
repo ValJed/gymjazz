@@ -1,8 +1,8 @@
 module.exports = {
-  extend: '@apostrophecms/widget-type',
-  fields: {
-    add: {
-
-    }
-  }
+  extend: '@apostrophecms/widget-type'
+  // fields: {
+  //   add: {
+  //
+  //   }
+  // }
 };

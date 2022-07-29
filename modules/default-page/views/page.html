@@ -1,13 +1,10 @@
-{#
-  This is an example home page template. It inherits and extends a layout template
-  that lives in the top-level views/ folder for convenience
-#}
-
 {% extends "layout.html" %}
 
 {% block main %}
-  <section class="bp-content">
-    <h1>{{ data.page.title }}</h1>
-    {% area data.page, 'main' %}
+  <section class="page-content">
+    <div class="container">
+      <h1 class="title">{{ data.page.title }}</h1>
+      {% area data.page, 'main' %}
+    </div>
   </section>
 {% endblock %}

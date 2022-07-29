@@ -5,6 +5,11 @@ module.exports = {
   },
   fields: {
     add: {
+      title: {
+        label: 'Page Title',
+        type: 'string',
+        required: true
+      },
       main: {
         type: 'area',
         options: {
@@ -15,7 +20,6 @@ module.exports = {
                 '|',
                 'bold',
                 'italic',
-                'strike',
                 'link',
                 '|',
                 'bulletList',
@@ -27,17 +31,16 @@ module.exports = {
                   label: 'Paragraph (P)'
                 },
                 {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
+                  tag: 'h2',
+                  label: 'Heading 2 (H2)'
                 },
                 {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
+                  tag: 'h3',
+                  label: 'Heading 3 (H3)'
                 }
               ]
             },
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
+            '@apostrophecms/image': {}
           }
         }
       }

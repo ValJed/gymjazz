@@ -34,7 +34,8 @@ module.exports = {
         options: {
           widgets: {
             block: {},
-            contact: {}
+            contact: {},
+            map: {}
           }
         }
       }
