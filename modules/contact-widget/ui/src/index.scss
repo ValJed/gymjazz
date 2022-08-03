@@ -13,6 +13,18 @@
     box-sizing: border-box;
   }
 
+  &__input-error {
+    color: #f03;
+    position: absolute;
+    font-size: 0.8rem;
+    left: 0;
+    bottom: 10px;
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
   &__inputs {
     display: flex;
     justify-content: space-between;
@@ -20,16 +32,18 @@
     @media screen and (max-width: 760px) {
       display: block;
     }
-  }
 
-  .text-input {
-    @media screen and (min-width: 760px) {
-      &:first-child {
-        margin-right: 15px;
-      }
+    .contact-widget__input-container {
+      width: 100%;
 
-      &:last-child {
-        margin-left: 15px;
+      @media screen and (min-width: 760px) {
+        &:first-child {
+          margin-right: 15px;
+        }
+
+        &:last-child {
+          margin-left: 15px;
+        }
       }
     }
   }

@@ -1,4 +1,4 @@
-@import "~normalize.css";
+// @import "~normalize.css";
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500;600;700&display=swap";
 
 // Global style
@@ -37,6 +37,7 @@ body {
   line-height: 1.4em;
   color: var(--primary);
   margin: 0 0 30px;
+  text-align: left;
 }
 
 .container {
@@ -69,7 +70,8 @@ body {
     margin-left: 5px;
   }
 
-  a {
+  a,
+  a:visited {
     color: #fff;
     text-decoration: none;
   }
@@ -124,5 +126,11 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+  }
+  
+  a,
+  a:visited {
+    color: #fff;
+    text-decoration: none;
   }
 }
