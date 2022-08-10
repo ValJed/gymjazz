@@ -5,6 +5,8 @@
 
 body {
   font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -127,11 +129,10 @@ body {
     text-decoration: none;
     font-weight: 700;
   }
-  
+
   a,
   a:visited {
     color: #fff;
     text-decoration: none;
   }
 }
-
