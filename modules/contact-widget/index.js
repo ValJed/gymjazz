@@ -22,8 +22,12 @@ module.exports = {
       post: {
         async sendMail(req, res) {
           const {
-            name, email, message
+            name, email, message, captcha, captchaRes
           } = req.body;
+
+          if (captcha !== captchaRes) {
+            throw self.apos.error('invalid', 'badcaptcha');
+          }
 
           if (!name || !email || !message) {
             throw self.apos.error('invalid');
@@ -45,6 +49,13 @@ module.exports = {
             console.log(err);
           }
         }
+      }
+    };
+  },
+  methods (self) {
+    return {
+      load (req, widgets) {
+        req.data.captcha = Array(2).fill().map(() => Math.floor(Math.random() * 20));
       }
     };
   }

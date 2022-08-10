@@ -10,11 +10,14 @@ export default () => {
 
       inputs.forEach((input) => {
         input.addEventListener('input', () => {
-          input.nextElementSibling.textContent = '';
+          if (input.nextElementSibling) {
+            input.nextElementSibling.textContent = '';
+          }
+          input.classList.remove('error');
         });
       });
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.target);
@@ -27,11 +30,22 @@ export default () => {
         }
 
         try {
-          apos.http.post('/api/v1/contact-widget/send-mail', {
-            body: formEntries
+          const captchaEl = el.querySelector('[data-captcha]');
+
+          const res = await apos.http.post('/api/v1/contact-widget/send-mail', {
+            body: {
+              ...formEntries,
+              captchaRes: captchaEl.dataset.captcha
+            }
           });
+
+          console.log('Call res bitch: ');
+          console.log(res);
         } catch (err) {
-          console.log(err);
+          console.log('in catch bitch: ', err);
+          console.log(err.body);
+          console.log(err.name);
+          console.log(err.data);
         }
       });
     }
@@ -62,6 +76,10 @@ function showErrorMessages(form, errors) {
   for (const prop in errors) {
     const input = form.querySelector(`[name="${prop}"]`);
 
-    input.nextElementSibling.textContent = errors[prop];
+    input.classList.add('error');
+
+    if (input.nextElementSibling) {
+      input.nextElementSibling.textContent = errors[prop];
+    }
   }
 }
