@@ -1,6 +1,6 @@
 {% set widget = data.widget %}
 
-<div class="block" data-contact>
+<div class="block" data-contact data-captcha="{{ data.captcha[0] + data.captcha[1] }}">
   <div class="contact-widget">
     <div class="container">
       <h2 class="contact-widget__title title">
@@ -22,12 +22,16 @@
           <textarea class="contact-widget__input textarea-input" name="message" placeholder="Message"></textarea>
           <span class="contact-widget__input-error"></span>
         </div>
-        <div class="contact-widget__btn-container">
-          <div class="contact-widget__captcha" data-captcha="{{ data.captcha[0] + data.captcha[1] }}">
+        <div class="contact-widget__submit-container">
+          <div class="contact-widget__message-container">
+            <p class="contact-widget__message"></p>
+          </div>
+
+          <div class="contact-widget__btn-container">
             <label for="captcha">{{ data.captcha[0] }} + {{ data.captcha[1] }} = </label>
             <input type="text" class="contact-widget__input" name="captcha" />
+            <input class="btn" type="submit" value="Envoi" />
           </div>
-          <input class="btn" type="submit" value="Envoi" />
         </div>
       </form>
     </div>

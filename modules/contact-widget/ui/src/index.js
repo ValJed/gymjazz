@@ -5,8 +5,11 @@ export default () => {
     selector: '[data-contact]',
     player(el) {
       const form = el.querySelector('.contact-widget__form');
-
       const inputs = form.querySelectorAll('.contact-widget__input');
+      const captchaInput = form.querySelector('[name="captcha"]');
+      const messageEl = form.querySelector('.contact-widget__message');
+
+      console.log(messageEl);
 
       inputs.forEach((input) => {
         input.addEventListener('input', () => {
@@ -30,22 +33,31 @@ export default () => {
         }
 
         try {
-          const captchaEl = el.querySelector('[data-captcha]');
-
-          const res = await apos.http.post('/api/v1/contact-widget/send-mail', {
+          await apos.http.post('/api/v1/contact-widget/send-mail', {
             body: {
               ...formEntries,
-              captchaRes: captchaEl.dataset.captcha
+              captchaRes: el.dataset.captcha
             }
           });
 
-          console.log('Call res bitch: ');
-          console.log(res);
+          messageEl.textContent = 'Message envoyé !';
         } catch (err) {
-          console.log('in catch bitch: ', err);
-          console.log(err.body);
-          console.log(err.name);
-          console.log(err.data);
+          messageEl.classList.add('error');
+
+          if (err.message === 'badcaptcha') {
+            captchaInput.value = '';
+            captchaInput.classList.add('error');
+            captchaInput.focus();
+
+            messageEl.textContent = 'Mauvais captcha !';
+          } else {
+            messageEl.textContent = 'Erreur lors de l\'envoi..';
+          }
+        } finally {
+          setTimeout(() => {
+            messageEl.textContent = '';
+            messageEl.classList.remove('error');
+          }, 3000);
         }
       });
     }

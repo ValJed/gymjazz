@@ -17,7 +17,7 @@ module.exports = {
       }
     }
   },
-  routes (self) {
+  apiRoutes (self) {
     return {
       post: {
         async sendMail(req, res) {
@@ -34,15 +34,11 @@ module.exports = {
           }
 
           try {
-            const { success } = await sendMail({
+            await sendMail({
               name,
               email,
               message
             });
-
-            if (!success) {
-              throw self.apos.error('invalid');
-            }
 
             return 'success';
           } catch (err) {

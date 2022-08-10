@@ -18,7 +18,7 @@
   }
 
   &__input-error {
-    color: #f03;
+    color: var(--error);
     position: absolute;
     font-size: 0.8rem;
     left: 0;
@@ -58,9 +58,35 @@
     resize: vertical;
   }
 
+  &__submit-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__btn-container {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+
+    label {
+      color: #666;
+    }
+
+    .contact-widget__input {
+      width: 60px;
+      margin: 0 15px 0 5px;
+    }
+  }
+
+  &__message-container {
+    flex-shrink: 0;
+  }
+
+  &__message {
+    color: var(--blue);
+
+    &.error {
+      color: var(--error);
+    }
   }
 
   &__captcha {
@@ -68,10 +94,5 @@
     align-items: center;
     position: relative;
     color: #666;
-
-    .contact-widget__input {
-      width: 60px;
-      margin: 0 15px 0 5px;
-    }
   }
 }
