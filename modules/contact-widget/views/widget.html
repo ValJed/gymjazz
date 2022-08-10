@@ -1,18 +1,32 @@
 {% set widget = data.widget %}
 
-<div class="block">
+<div class="block" data-contact>
   <div class="contact-widget">
     <div class="container">
       <h2 class="contact-widget__title title">
         {{ widget.title }}
       </h2>
-      <form class="contact-widget__form" action="">
+      <form class="contact-widget__form">
         <div class="contact-widget__inputs">
-          <input class="contact-widget__input text-input" type="name" placeholder="Nom" />
-          <input class="contact-widget__input text-input" type="email" placeholder="Adresse e-mail" />
+          <div class="contact-widget__input-container">
+            <input class="contact-widget__input" type="text" name="name" placeholder="Nom" />
+            <span class="contact-widget__input-error"></span>
+          </div>
+          <div class="contact-widget__input-container">
+            <input class="contact-widget__input" type="text" name="email" placeholder="Adresse e-mail" />
+            <span class="contact-widget__input-error"></span>
+          </div>
         </div>
-        <textarea class="contact-widget__input textarea-input" type="textarea" placeholder="Message"></textarea>
+
+        <div class="contact-widget__input-container">
+          <textarea class="contact-widget__input textarea-input" name="message" placeholder="Message"></textarea>
+          <span class="contact-widget__input-error"></span>
+        </div>
         <div class="contact-widget__btn-container">
+          <div class="contact-widget__captcha" data-captcha="{{ data.captcha[0] + data.captcha[1] }}">
+            <label for="captcha">{{ data.captcha[0] }} + {{ data.captcha[1] }} = </label>
+            <input type="text" class="contact-widget__input" name="captcha" />
+          </div>
           <input class="btn" type="submit" value="Envoi" />
         </div>
       </form>
