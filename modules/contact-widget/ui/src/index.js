@@ -9,8 +9,6 @@ export default () => {
       const captchaInput = form.querySelector('[name="captcha"]');
       const messageEl = form.querySelector('.contact-widget__message');
 
-      console.log(messageEl);
-
       inputs.forEach((input) => {
         input.addEventListener('input', () => {
           if (input.nextElementSibling) {
