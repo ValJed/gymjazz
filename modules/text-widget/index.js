@@ -36,7 +36,7 @@ module.exports = {
               max: 1,
               builders: {
                 project: {
-                  _url: 1
+                  attachment: 1
                 }
               }
             }
