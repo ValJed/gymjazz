@@ -13,6 +13,8 @@ require('apostrophe')({
     // have a minimal configuration here to turn them on: `moduleName: {}`
     // ***********************************************************************
     // `className` options set custom CSS classes for Apostrophe core widgets.
+    //
+    '@apostrophecms/seo': {},
     '@apostrophecms/rich-text-widget': {
       options: {
         className: 'apos-rich-text'
