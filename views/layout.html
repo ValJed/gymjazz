@@ -1,11 +1,17 @@
 {% extends data.outerLayout %}
 {% set title = data.piece.title or data.page.title %}
+
 {% block title %}
     {{ title }}
     {% if not title %}
         {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
     {% endif %}
 {% endblock %}
+
+{% block extraHead %}
+  <link rel="icon" href="/images/favicon.png" />
+{% endblock %}
+
 {% block beforeMain %}
 <div class="page-container">
     <header class="header">
