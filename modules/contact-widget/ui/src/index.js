@@ -39,6 +39,9 @@ export default () => {
           });
 
           messageEl.textContent = 'Message envoyé !';
+          inputs.forEach((input) => {
+            input.value = '';
+          });
         } catch (err) {
           messageEl.classList.add('error');
 
