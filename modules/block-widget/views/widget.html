@@ -1,6 +1,7 @@
 {% set img = apos.image.first(data.widget.image) %}
 {% set gradient = "linear-gradient(180deg,#ffffff 0%,rgba(255,255,255,0.83) 100%)" %}
+{% set registrationId = 'id=registration' if data.widget.isRegistrationBlock else '' %}
 
-<div class="block" style="background-image: {{ gradient }},url({{ img._urls.original }})">
+<div {{ registrationId }} class="block" style="background-image: {{ gradient }},url({{ img._urls.original }})">
   {% area data.widget, 'content' %}
 </div>

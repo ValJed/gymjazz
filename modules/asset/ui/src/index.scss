@@ -3,6 +3,10 @@
 
 // Global style
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Nunito, Helvetica, Arial, Lucida, sans-serif;
   padding: 0;

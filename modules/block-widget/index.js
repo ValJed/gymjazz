@@ -21,6 +21,11 @@ module.exports = {
             list: {}
           }
         }
+      },
+      isRegistrationBlock: {
+        label: 'Is Registration Block?',
+        type: 'boolean',
+        def: false
       }
     }
   }
