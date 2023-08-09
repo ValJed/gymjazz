@@ -40,8 +40,8 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms/seo": "^1.1.1",
-    "apostrophe": "^3.0.0",
+    "@apostrophecms/seo": "^1.2.0",
+    "apostrophe": "^3.53.0",
     "dotenv": "^16.0.1",
     "nodemailer": "^6.7.7",
     "normalize.css": "^8.0.1"
